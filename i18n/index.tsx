@@ -3,7 +3,7 @@ const resources = {
   en: {
     main: {
       'Work Experience': 'Welcome to React and react-i18next',
-      greeting: "Hi, I'm",
+      greeting: "Hi! I'm",
       greetingText: (
         <>
           {"I'm a "}
@@ -51,7 +51,7 @@ const resources = {
   },
   fr: {
     main: {
-      greeting: 'Hello, je suis',
+      greeting: 'Hello ! Je suis',
       greetingText: (
         <>
           {'Je suis un '}

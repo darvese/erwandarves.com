@@ -8,7 +8,7 @@ const ThemeToggleButton = () => {
     theme === ThemeEnum.DARK ? ['Light mode', sunIcon, 'Sun icon'] : ['Dark mode', moonIcon, 'Moon icon']
 
   return (
-    <button className='flex p-2 text-yellow-400 focus-outline hover:glow' onClick={toggleTheme} aria-label={label}>
+    <button className='flex p-2 text-yellow-400 hover:glow' onClick={toggleTheme} aria-label={label}>
       <SvgIcon className='w-5' d={icon} title={iconLabel} viewBox='0 0 512 512' />
     </button>
   )
