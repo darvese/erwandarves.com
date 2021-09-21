@@ -28,7 +28,7 @@ const getUntoggledI18n = (i18n: I18nEnum) => {
 export const I18nProvider: React.FunctionComponent<II18nProvider> = ({ children }) => {
   const [i18n, setI18n] = useState(() => {
     if (typeof window === 'undefined') {
-      return undefined
+      return I18nEnum.EN
     }
     const storedI18n = window.localStorage.getItem(STORAGE_KEY)
     return (storedI18n as I18nEnum) || I18nEnum.EN

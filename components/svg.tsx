@@ -106,7 +106,7 @@ export const ComplexSvgIcon = ({
       {dContent.map((d, index) => {
         return (
           <path
-            key={'index'}
+            key={index}
             d={d}
             fill={fills?.length > index && fills[index]}
             stroke={strokes?.length > index && strokes[index]}

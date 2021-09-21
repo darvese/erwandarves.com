@@ -18,10 +18,13 @@ import {
   webpackOuter,
 } from '@/components/svg'
 import { ThemeEnum, useTheme } from '@/contexts/theme'
+import resources from '@/i18n'
+import { useI18n } from '@/contexts/i18n'
 
 const HomePage = () => {
   const sectionClassName = 'flex flex-col px-4 tablet:px-8'
   const { theme } = useTheme()
+  const { i18n } = useI18n()
 
   return (
     <>
@@ -30,28 +33,22 @@ const HomePage = () => {
       </Head>
       <main className='grid-wrapper min-h-content'>
         <h1 className='px-4 tablet:px-8'>
-          Hi, I&apos;m <span className='inline-block'>Erwan Darves</span>
+          {resources[i18n]?.main?.greeting} <span className='inline-block'>Erwan Darves</span>
         </h1>
         <section className={sectionClassName} aria-label='Summary'>
+          <p>{resources[i18n]?.main?.greetingText}</p>
           <p>
-            I&apos;m a <strong>software engineer</strong> specialized in <strong>Frontend Web developement</strong>.
-          </p>
-          <p>
-            I live in France, where I work as a Software architect for{' '}
+            {resources[i18n]?.main?.greetingCurrentWork}
             <Link className='focus-outline' href='https://bouyguestelecom.fr' external>
               Bouygues Telecom
             </Link>
             .
           </p>
-          <p>
-            {'My main technology is '}
-            <strong>React.js</strong>
-            {", and I've been working with it for 3 years now."}
-          </p>
+          <p>{resources[i18n]?.main?.greetingTechnology}</p>
         </section>
         <section className={sectionClassName} aria-labelledby='tech-skills'>
-          <h2 id='tech-skills'>Tech Skills</h2>
-          <p>Here are some of the technologies and tools I use in my projects:</p>
+          <h2 id='tech-skills'>{resources[i18n]?.main?.skillsTitle}</h2>
+          <p>{resources[i18n]?.main?.skillsText}</p>
           <ul className='flex flex-wrap tablet:px-4'>
             <SkillItem
               hoverClassName='group-hover:text-[#F0DB4F]'
@@ -162,55 +159,44 @@ const HomePage = () => {
           </ul>
         </section>
         <section className={sectionClassName} aria-labelledby='timeline'>
-          <h2 id='timeline'>Work Experience</h2>
+          <h2 id='timeline'>{resources[i18n]?.main?.workTitle}</h2>
           <ul>
-            <TimelineItem current date='2020-08-17' title='Software Architect at Bouygues Telecom'>
-              <p>
-                {"Challenged and improved the technical stack of the site's "}
-                search engine .
-              </p>
-              <p>Became the lead developer on the search engine.</p>
-              <p>{"Deployed the company's first Micro-Frontend application in production."}</p>
-              <p>Assisted in the implementation of the Micro-Frontend architecture on the site.</p>
+            <TimelineItem current date='2020-08-17' title={resources[i18n]?.main?.job1Title}>
+              <p>{resources[i18n]?.main?.job1Text1}</p>
+              <p>{resources[i18n]?.main?.job1Text2}</p>
+              <p>{resources[i18n]?.main?.job1Text3}</p>
+              <p>{resources[i18n]?.main?.job1Text4}</p>
             </TimelineItem>
-            <TimelineItem dateEnd='2020-08-10' date='2020-02-10' title='Software Engineer at Bouygues Telecom'>
-              <p>
-                Helped in the design and development of a software and technical architecture based on Kubernetes and
-                Micro-Frontends.
-              </p>
-              <p>Implemented a Server-Side Rendering solution in a Micro-Frontend context.</p>
-              <p>Developed a React Micro-Frontend application generator similar to Create React App.</p>
+            <TimelineItem dateEnd='2020-08-10' date='2020-02-10' title={resources[i18n]?.main?.job2Title}>
+              <p>{resources[i18n]?.main?.job2Text1}</p>
+              <p>{resources[i18n]?.main?.job2Text2}</p>
+              <p>{resources[i18n]?.main?.job2Text3}</p>
             </TimelineItem>
-            <TimelineItem dateEnd='2019-01-18' date='2018-09-18' title='Frontend Web Developper at Bouygues Telecom'>
-              <p>
-                Created and designed an Angular / Typescript internal Web application, for BPMN modeling, with
-                authentification and roles.
-              </p>
+            <TimelineItem dateEnd='2019-01-18' date='2018-09-18' title={resources[i18n]?.main?.job3Title}>
+              <p>{resources[i18n]?.main?.job3Text1}</p>
             </TimelineItem>
-            <TimelineItem dateEnd='2017-07-20' date='2017-05-20' title='CMS Developper at Netrock'>
-              <p>Designed and built an E-Commerce Website using Wordpress and Woo Commerce.</p>
+            <TimelineItem dateEnd='2017-07-20' date='2017-05-20' title={resources[i18n]?.main?.job4Title}>
+              <p>{resources[i18n]?.main?.job4Text1}</p>
             </TimelineItem>
           </ul>
           <h2 id='timeline'>Education</h2>
           <ul>
-            <TimelineItem dateEnd='2020-08-10' date='2015-09-01' title='EPITA (Master)'>
-              <p>
-                Web Development, 1-year projects (FullStack entrepreneurial project, FullStack Web Application for a
-                company)
-              </p>
-              <p>Algorithms (Graph, Linked list, Binary tree)</p>
-              <p>C C++ projects (Recreating standard C library, compiler, interpreter, HTTP server)</p>
+            <TimelineItem dateEnd='2020-08-10' date='2015-09-01' title={resources[i18n]?.main?.epitaTitle}>
+              <p>{resources[i18n]?.main?.epitaText1}</p>
+              <p>{resources[i18n]?.main?.epitaText2}</p>
+              <p>{resources[i18n]?.main?.epitaText3}</p>
             </TimelineItem>
           </ul>
         </section>
         <section className={sectionClassName} aria-labelledby='contact'>
           <h2 id='contact'>Contact</h2>
           <p>
-            You can contact me by{' '}
+            {resources[i18n]?.main?.contactText1}{' '}
             <Link className='focus-outline' href='mailto:erwan.darves@gmail.com' external>
               email
             </Link>
-            . You can also check out my social media presence following the links below.
+            {'. '}
+            {resources[i18n]?.main?.contactText2}
           </p>
         </section>
       </main>

@@ -1,4 +1,5 @@
 import '@/styles/app.css'
+import '@/i18n'
 import { ThemeProvider } from '@/contexts/theme'
 import { I18nProvider } from '@/contexts/i18n'
 import Header from '@/components/header'

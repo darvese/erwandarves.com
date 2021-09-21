@@ -30,8 +30,5 @@ module.exports = {
                 '-1': '-1'
             }
         }
-    },
-    plugins: [
-        require("tailwindcss-glow")(),
-    ]
+    }
 }
