@@ -1,5 +1,7 @@
 # [erwandarves.com](https://erwandarves.com/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d70dc243-57d5-4d25-8ac2-74a0fe5fdd51/deploy-status)](https://app.netlify.com/sites/practical-einstein-d90e91/deploys)
+
 My website built with [Next.js](https://github.com/vercel/next.js) + [TypeScript](https://github.com/microsoft/TypeScript) + [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) and deployied using [Netflify](https://www.netlify.com/).
 
 For now this website is very simple, and I aim to implements other features on other pages to showcase my skills.
