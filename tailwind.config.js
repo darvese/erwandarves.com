@@ -16,8 +16,8 @@ module.exports = {
             gray: colors.blueGray,
             yellow: colors.yellow,
             midnight: '#0b0d24',
-            neonBlue: '#2a4158',
-            lightBlue: '#597387'
+            'neon-blue': '#2a4158',
+            'light-blue': '#597387'
         },
         fontFamily: {
             sans: ['Lato', ...defaultTheme.fontFamily.sans]
