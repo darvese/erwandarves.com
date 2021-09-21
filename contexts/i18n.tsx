@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 const STORAGE_KEY = 'i18n'
 
 export enum I18nEnum {
-  fr = 'fr',
+  FR = 'fr',
   EN = 'en',
 }
 
@@ -22,7 +22,7 @@ interface II18nProvider {}
 export const useI18n = () => useContext<II18nContext>(I18nContext)
 
 const getUntoggledI18n = (i18n: I18nEnum) => {
-  return i18n === I18nEnum.EN ? I18nEnum.fr : I18nEnum.EN
+  return i18n === I18nEnum.EN ? I18nEnum.FR : I18nEnum.EN
 }
 
 export const I18nProvider: React.FunctionComponent<II18nProvider> = ({ children }) => {

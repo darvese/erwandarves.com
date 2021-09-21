@@ -16,7 +16,7 @@ module.exports = {
             gray: colors.blueGray,
             yellow: colors.yellow,
             midnight: '#0b0d24',
-            'neon-blue': '#2a4158',
+            'neon-blue': '#b6c5d4',
             'light-blue': '#597387'
         },
         fontFamily: {
@@ -30,5 +30,8 @@ module.exports = {
                 '-1': '-1'
             }
         }
-    }
+    },
+    plugins: [
+        require("tailwindcss-glow")(),
+    ]
 }
